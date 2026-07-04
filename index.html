@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Girl RPG</title>
+
+<style>
+
+body{
+    background:#EAF8FF;
+    font-family:Arial;
+    text-align:center;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    width:350px;
+    margin:auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0px 5px 20px #cccccc;
+}
+
+button{
+    padding:15px;
+    font-size:18px;
+    background:#6BCB77;
+    color:white;
+    border:none;
+    border-radius:15px;
+}
+
+button:hover{
+    background:#55b863;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌼 Library Girl RPG 🌼</h1>
+
+<h2>Level <span id="level">1</span></h2>
+
+<h3>EXP <span id="exp">0</span> / 100</h3>
+
+<h1 id="flower">🌱</h1>
+
+<button onclick="gainEXP()">
+
+Complete Quest
+
+</button>
+
+</div>
+
+<script>
+
+let exp=0;
+let level=1;
+
+function gainEXP(){
+
+exp+=20;
+
+if(exp>=100){
+
+exp=0;
+
+level++;
+
+document.getElementById("level").innerHTML=level;
+
+alert("🎉 LEVEL UP!");
+
+}
+
+document.getElementById("exp").innerHTML=exp;
+
+if(level==1){
+document.getElementById("flower").innerHTML="🌱";
+}
+
+if(level==2){
+document.getElementById("flower").innerHTML="🌿";
+}
+
+if(level==3){
+document.getElementById("flower").innerHTML="🌼";
+}
+
+if(level>=4){
+document.getElementById("flower").innerHTML="🌳";
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
