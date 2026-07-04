@@ -346,4 +346,34 @@ button:hover{
 
 }
 
+}.quest-row{
+
+padding:14px;
+
+margin-top:12px;
+
+border-radius:14px;
+
+background:#F7FAFD;
+
+}
+
+.quest-row label{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:17px;
+
+}
+
+.quest-row input{
+
+width:22px;
+
+height:22px;
+
 }
