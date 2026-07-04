@@ -1,0 +1,349 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(#DDF4FF,#F6FCFF);
+
+    color:#2E4057;
+
+    min-height:100vh;
+
+    padding:20px;
+
+}
+
+.app{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr 340px;
+
+    gap:20px;
+
+    align-items:start;
+
+}
+
+.left-panel,
+.center-panel,
+.right-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.profile-card,
+.garden-card,
+.hero-card,
+.phase-card,
+.growth-card,
+.quest-card,
+.reward-card,
+.stats-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.profile-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.version{
+
+    width:120px;
+
+    margin:auto;
+
+    background:#D9ECFF;
+
+    text-align:center;
+
+    padding:8px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+}
+
+.avatar{
+
+    width:170px;
+
+    height:170px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFF4E5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    border:4px solid #F2E6D8;
+
+}
+
+.level{
+
+    margin-top:25px;
+
+}
+
+.exp-bar{
+
+    height:14px;
+
+    background:#E8EEF5;
+
+    border-radius:20px;
+
+    margin-top:10px;
+
+    overflow:hidden;
+
+}
+
+.exp-fill{
+
+    width:20%;
+
+    height:100%;
+
+    background:#66CC7A;
+
+}
+
+.coins{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.quote{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#5F7186;
+
+    font-style:italic;
+
+}
+
+.garden{
+
+    margin-top:25px;
+
+    font-size:80px;
+
+    text-align:center;
+
+}
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.hero-card{
+
+    min-height:430px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(#DDF4FF,#FFFDF7);
+
+}
+
+.hero-image{
+
+    font-size:140px;
+
+}
+
+.speech{
+
+    margin-top:20px;
+
+    width:75%;
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    color:#4F6275;
+
+}
+
+.phase-card h2,
+.growth-card h2,
+.quest-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.phase-icons{
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:10px;
+
+    text-align:center;
+
+}
+
+.phase-icons div{
+
+    background:#F8FBFF;
+
+    border-radius:18px;
+
+    padding:15px;
+
+}
+
+.week{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.week div{
+
+    background:#F9FBFD;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+.quest-card h2{
+
+    margin-top:25px;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#61C56F;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    transform:scale(1.02);
+
+    background:#4CAF60;
+
+}
+
+.reward-card,
+.stats-card{
+
+    text-align:center;
+
+}
+
+@media(max-width:1200px){
+
+.app{
+
+    grid-template-columns:1fr;
+
+}
+
+}
