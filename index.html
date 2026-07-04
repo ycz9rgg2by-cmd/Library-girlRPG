@@ -1,106 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Library Girl RPG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+<title>Library Girl RPG v0.2</title>
 
-body{
-    background:#EAF8FF;
-    font-family:Arial;
-    text-align:center;
-    padding:40px;
-}
-
-.card{
-    background:white;
-    width:350px;
-    margin:auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0px 5px 20px #cccccc;
-}
-
-button{
-    padding:15px;
-    font-size:18px;
-    background:#6BCB77;
-    color:white;
-    border:none;
-    border-radius:15px;
-}
-
-button:hover{
-    background:#55b863;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="card">
+<div class="app">
 
-<h1>🌼 Library Girl RPG 🌼</h1>
+    <!-- LEFT PANEL -->
 
-<h2>Level <span id="level">1</span></h2>
+    <aside class="left-panel">
 
-<h3>EXP <span id="exp">0</span> / 100</h3>
+        <div class="profile-card">
 
-<h1 id="flower">🌱</h1>
+            <h1>🌼 Library Girl RPG 🌼</h1>
 
-<button onclick="gainEXP()">
+            <div class="version">
+                Version 0.2
+            </div>
 
-Complete Quest
+            <div class="avatar">
+                👧
+            </div>
 
-</button>
+            <div class="level">
+
+                <h2>Level 1</h2>
+
+                <p>EXP 20 / 100</p>
+
+                <div class="exp-bar">
+
+                    <div class="exp-fill"></div>
+
+                </div>
+
+            </div>
+
+            <div class="coins">
+
+                🪙 Health Coins
+
+                <span>20</span>
+
+            </div>
+
+            <div class="quote">
+
+                Small steps today,<br>
+
+                blossom into a better tomorrow.
+
+            </div>
+
+        </div>
+
+
+        <div class="garden-card">
+
+            <h2>🌼 Daisy Garden</h2>
+
+            <p>Week Progress</p>
+
+            <div class="garden">
+
+                🌱
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CENTER PANEL -->
+
+    <main class="center-panel">
+
+        <div class="top-bar">
+
+            <div id="todayDate">
+
+                Saturday, 4 July 2026
+
+            </div>
+
+            <div id="greeting">
+
+                ☀️ Good Morning, Library Girl!
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-image">
+
+                👧
+
+            </div>
+
+            <div class="speech">
+
+                Every healthy choice is another page in your best life story.
+
+            </div>
+
+        </div>
+
+
+        <div class="phase-card">
+
+            <h2>
+
+                Phase 1
+
+            </h2>
+
+            <p>
+
+                Build the Foundation
+
+            </p>
+
+            <div class="phase-icons">
+
+                <div>📅<br>Consistency</div>
+
+                <div>🥗<br>Nutrition</div>
+
+                <div>👟<br>Movement</div>
+
+                <div>😴<br>Sleep</div>
+
+                <div>❤️<br>Mindset</div>
+
+            </div>
+
+        </div>
+
+
+        <div class="growth-card">
+
+            <h2>
+
+                Daisy Growth Progress
+
+            </h2>
+
+            <div class="week">
+
+                <div>Mon<br>🌱</div>
+
+                <div>Tue<br>🌱</div>
+
+                <div>Wed<br>🌿</div>
+
+                <div>Thu<br>🌷</div>
+
+                <div>Fri<br>🌼</div>
+
+                <div>Sat<br>🌼</div>
+
+                <div>Sun<br>🌸</div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="right-panel">
+
+        <div class="quest-card">
+
+            <h1>
+
+                Today's Quest
+
+            </h1>
+
+            <p>
+
+                Based on real day of week
+
+            </p>
+
+            <h2>
+
+                Saturday
+
+            </h2>
+
+            <h3>
+
+                Reflection & Recharge
+
+            </h3>
+
+            <div id="questList">
+
+                <!-- game.js -->
+
+            </div>
+
+            <button id="completeButton">
+
+                ✓ Complete Quest
+
+            </button>
+
+        </div>
+
+
+        <div class="reward-card">
+
+            <h2>
+
+                Next Reward
+
+            </h2>
+
+            <p>
+
+                🌼 Daisy Bloom
+
+            </p>
+
+        </div>
+
+
+        <div class="stats-card">
+
+            <h2>
+
+                This Week
+
+            </h2>
+
+            <p>
+
+                Quests Completed
+
+            </p>
+
+            <p>
+
+                Health Coins
+
+            </p>
+
+            <p>
+
+                Daisy Stage
+
+            </p>
+
+            <p>
+
+                Streak
+
+            </p>
+
+        </div>
+
+    </aside>
 
 </div>
 
-<script>
-
-let exp=0;
-let level=1;
-
-function gainEXP(){
-
-exp+=20;
-
-if(exp>=100){
-
-exp=0;
-
-level++;
-
-document.getElementById("level").innerHTML=level;
-
-alert("🎉 LEVEL UP!");
-
-}
-
-document.getElementById("exp").innerHTML=exp;
-
-if(level==1){
-document.getElementById("flower").innerHTML="🌱";
-}
-
-if(level==2){
-document.getElementById("flower").innerHTML="🌿";
-}
-
-if(level==3){
-document.getElementById("flower").innerHTML="🌼";
-}
-
-if(level>=4){
-document.getElementById("flower").innerHTML="🌳";
-}
-
-}
-
-</script>
+<script src="game.js"></script>
 
 </body>
 
